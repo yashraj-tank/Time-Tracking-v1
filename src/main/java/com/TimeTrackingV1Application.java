@@ -22,6 +22,13 @@ public class TimeTrackingV1Application {
         return new BCryptPasswordEncoder();
     }
 	
+	@Bean
+	Cloudinary getCloudinary() {
+		Map<String, String> config = new HashMap<>();
+		config.put("cloud_name", "diyl3pgit");
+		config.put("api_key", "585787524947233");
+		config.put("api_secret", "Jtk5luHVI6g6Jm9MXSHFRxbQPMc");
+		return new Cloudinary(config);
+	}
 
-	
 }
