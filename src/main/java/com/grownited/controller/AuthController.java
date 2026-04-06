@@ -67,7 +67,7 @@ public class AuthController {
         user.setOtp(null);
         user.setProfilePicURL(null);
 
-        //userRepository.save(user);
+        userRepository.save(user);
 
         mailerService.sendWelcomeMail(user);
 
