@@ -26,6 +26,11 @@ public class AuthController {
 
     @Autowired
     private MailerService mailerService;
+    
+    @GetMapping("/")
+    public String openlogin1() {
+    	return "Login";
+    }
 
     // Show signup page
     @GetMapping("/signup")

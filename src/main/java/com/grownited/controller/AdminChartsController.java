@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+//TimeTrackingV1-0.0.1-SNAPSHOT.war
 @Controller
 @RequestMapping("/admin/charts")
 public class AdminChartsController {
@@ -21,6 +22,11 @@ public class AdminChartsController {
 
     @Autowired
     private ProjectRepository projectRepository;
+    
+    @GetMapping("/")
+    public String openlogin() {
+    	return "Login";
+    }
 
     @GetMapping
     public String showCharts(Model model) {
